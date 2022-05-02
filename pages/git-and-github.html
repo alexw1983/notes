@@ -1,0 +1,234 @@
+<html>
+
+<head>
+    <title>Git and Github</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../iamges/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="../styles/main.css" />
+</head>
+
+<body>
+
+    <main>
+        <section id="Sidebar">
+            <div class="logo">
+                <img alt="logo" src="../images/android-chrome-512x512.png" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Git and Github</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="MainContent">
+            <header>
+                <h1>Git and Github</h1>
+            </header>
+            <article>
+                <h2>Contents</h2>
+                <ul>
+                    <li>
+                        What is Git?
+                    </li>
+                    <li>
+                        What is Github?
+                    </li>
+                    <li>
+                        How to Create a Repository
+                    </li>
+                    <li>
+                        How to Clone a Repository
+                    </li>
+                    <li>
+                        How to Create a branch
+                    </li>
+                    <li>
+                        How to Publish your branch
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h2 id="WhatIsGit">What is Git?</h2>
+                <p>
+                    Git is a piece of software that tracks changes to files. It is mostly used by software developers to
+                    manage changes and to coordinate between each other. Git uses the concept of repositories
+                    (often referred to as repos). These are basically just folders in which git will track any changes
+                    to
+                    files and folders.
+                </p>
+                <p>
+                    Git saves changes to files in what are called commits. A commit can be thought of like a save point.
+                    Every batch of changes is stored in a commit and will have a unique id. One of the great features of
+                    git
+                    is that you can rollback to an earlier commit if you make a mistake. This is often used to correct
+                    broken releases.
+                </p>
+                <h3>Further Reading</h3>
+                <p>
+                    You can find out more at the links below. Also google is your friend here there are loads of
+                    resources
+                    online easily found with a quick search.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://git-scm.com/doc">Git documentation</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.github.com/en/get-started/using-git/about-git">Github notes on git</a>
+                    </li>
+                    <li>
+                        <a href="https://git-scm.com/downloads">To install git</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h2 id="WhatIsGithub">What is Github?</h2>
+                <p><a href="https://github.com/">Login</a></p>
+                <p>
+                    Github is a website that stores git repositories. It has a lot of extra features but basically it is
+                    a
+                    central place to store your repositories.
+                </p>
+                <p>
+                    This is really useful for developers collaborating on projects. Usually there will be a central
+                    repository in github and developers <strong>clone</strong> the repository to their local machines.
+                    Any
+                    changes can be made safely and merged in after review.
+                </p>
+                <p>The basic flow goes like this (more details below):</p>
+                <ol>
+                    <li>
+                        <strong>Clone</strong> the repo locally or <strong>pull</strong> the latest changes if you
+                        already
+                        have it locally.
+                    </li>
+                    <li>
+                        Create a <strong>branch</strong>.
+                    </li>
+                    <li>
+                        <strong>Publish</strong> that branch to github.
+                    </li>
+                    <li>
+                        <strong>Stage</strong> any changes then <strong>commit</strong> them. Repeat as many times as
+                        you like.
+                    </li>
+                    <li>
+                        <strong>Push</strong> those changes to github. Note you will need to be a collaborator on the
+                        repo to allow you to do this.
+                    </li>
+                    <li>
+                        Create a <strong>Pull Request</strong> and get a peer review.
+                    </li>
+                    <li>
+                        <strong>Merge</strong> in to master.
+                    </li>
+                </ol>
+            </article>
+            <article>
+                <h2>How to Create a Repository</h2>
+                <p>To get started you will need a repository in github. This is really easy to do and <a
+                        href="https://www.tutorialspoint.com/how-to-create-a-github-repository">this article</a> has a
+                    great description.</p>
+            </article>
+            <article>
+                <h2>How to Clone a Repository</h2>
+                <p>Cloning a repository creates a local copy of the repository on your machine and allows you to track
+                    the changes between the two.</p>
+                <code>
+                    git clone "path_to_repository"
+                </code>
+                <p>Replace "path_to_repository" you can get this from git hub by going to the repo and clicking the down
+                    arrow next to the green "Code" button and copying the url under the https tab.</p>
+                <img src="../images/path-to-repo.png" alt="github" width="600">
+                <p>e.g.</p>
+                <code>
+                    git clone https://github.com/alexw1983/notes.git
+                </code>
+            </article>
+            <article>
+                <h2>
+                    How to Create a Branch
+                </h2>
+                <p>A branch is a way of making changes withour affecting our master branch. A branch can be thought of
+                    as a copy of the code. You can switch between branches as much as you like. All repositories come
+                    with one branch as standard either called <strong>master</strong> or <strong>main</strong>. You
+                    should create a branch before making any changes.</p>
+                <code>
+                        git checkout -b "name-of-your-branch"
+                    </code>
+                <p>Replace "name-of-your-branch" with a sensible name for your branch. You should avoid using spaces in
+                    your branch names.</p>
+                <p>
+                    You can see which branch you are on by using
+                </p>
+                <code>
+                        git branch
+                    </code><br />
+                <img src="../images/brnach-demo.png" alt="branch demo" width="400">
+                <p>VSCode also has tools to help you with branches. If you look at the bar in the bottom left you can
+                    see which branch you are on next to the git logo.</p>
+                <img src="../images/vs-code-branch.png" alt="branch demo" width="300">
+                <p>
+                    If you click on this branch name VSCode will give you some options to manage branches as well.
+                </p>
+            </article>
+            <article>
+                <h2>How to Publish your Branch</h2>
+                <p>
+                    You will need to publish your branch to github so that the remote repository knows about your
+                    changes.
+                </p>
+                <code>
+    git push -u origin "name_of_your_branch"
+</code>
+                <p>Alternatively you can use VSCode. The little button next to the branch name that looks like a cloud
+                    with an arrow in it will publish your branch. Note that all of these VScode helpers are just running
+                    the commands we are typing.</p>
+                <img src="../images/vscode-publish.png" alt="publish demo" width="300">
+            </article>
+            <article>
+                <h2>
+                    How to Commit your changes
+                </h2>
+                <p>
+                    In git a commit is a save point of your changes. You can create as many as you want. Each commit
+                    will have a unique id.
+                </p>
+                <p>To create a commit requires 2 steps the first is called staging and is a way to preview what you are
+                    going to commit. This is useful if you don't want to commit everything or what to double check
+                    things.The second stage is actually commit the things you have staged.</p>
+                <p>
+                    To stage all the files you have changed use the following. Note the full stop after the add.
+                </p>
+                <code>
+                        git add .
+                    </code>
+                <p>
+                    Alternatively you can specify file names.
+                </p>
+                <p>
+                    You can use the the following to see which files you have staged.
+                </p>
+                <code>
+                    git status
+                </code>
+                <img src="../images/status-demo.png" alt="status demo" width="300">
+                <p>
+                    Alternatively you can use the VSCode git hub menu. On the left menu click on the github icon (often
+                    the third one down) and you should see the following:
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer></footer>
+</body>
+
+</html>
