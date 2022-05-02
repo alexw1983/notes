@@ -36,28 +36,30 @@
                 <h3>Clone</h3>
                 <p>Note you only have to do this the first time. This will create a folder on your computer with all the
                     code in it. You will need to be in that folder for the rest of this to work.</p>
+                <p>Replace {PATH_TO_REPO} with URL</p>
                 <code>
-                   git clone path_to_repo
+                   git clone {PATH_TO_REPO}
                </code>
                 <h3>Create branch</h3>
                 <p>
                     Create a version of the code just for you.
                 </p>
+                <p>Replace {BRANCH_NAME} with something sensible</p>
                 <code>
-                   git checkout -b branch_name
+                   git checkout -b {BRANCH_NAME}
                </code>
                 <h3>Publish branch</h3>
                 <p>
                     Let github know about your branch.
                 </p>
                 <code>
-                   git push -u origin branch_name
+                   git push -u origin {BRANCH_NAME}
                </code>
                 <h3>
                     Stage all changes
                 </h3>
                 <p>
-                    Preview yoru changes before saving.
+                    Preview your changes before saving.
                 </p>
                 <code>
                    git add .
@@ -66,7 +68,7 @@
                     Stage specific file
                 </h3>
                 <code>
-                    git add path_to_file
+                    git add {PATH_TO_FILE}
                 </code>
                 <h3>
                     Commit Changes
@@ -74,8 +76,9 @@
                 <p>
                     Save your changes to git. Note this isn't the same as saving them on disk.
                 </p>
+                <p>Replace message with something else</p>
                 <code>
-                    git commit -m "message" 
+                    git commit -m "{MESSAGE}" 
                 </code>
                 <h3>
                     Push Changes
