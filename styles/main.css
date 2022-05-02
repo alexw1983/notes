@@ -71,7 +71,12 @@ header {
     border-bottom: 1px solid #3d3d3d;
 }
 
-
+.important {
+    background-color: #209CEE;
+    color: White;
+    box-shadow: 2px 2px 2px 2px #ababab;
+    padding: 5px;
+}
 
 #MainContent {
     max-width: 600px;

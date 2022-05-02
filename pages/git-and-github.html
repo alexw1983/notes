@@ -43,6 +43,9 @@
                         How to Create a Repository
                     </li>
                     <li>
+                        How to Add Collaborators
+                    </li>
+                    <li>
                         How to Clone a Repository
                     </li>
                     <li>
@@ -50,6 +53,21 @@
                     </li>
                     <li>
                         How to Publish your branch
+                    </li>
+                    <li>
+                        How to Commit your changes
+                    </li>
+                    <li>
+                        How to Push your commits
+                    </li>
+                    <li>
+                        How to get the latest changes
+                    </li>
+                    <li>
+                        How to merge your changes in
+                    </li>
+                    <li>
+                        How to host your site in github pages.
                     </li>
                 </ul>
             </article>
@@ -130,11 +148,20 @@
                     </li>
                 </ol>
             </article>
+
             <article>
                 <h2>How to Create a Repository</h2>
                 <p>To get started you will need a repository in github. This is really easy to do and <a
                         href="https://www.tutorialspoint.com/how-to-create-a-github-repository">this article</a> has a
                     great description.</p>
+            </article>
+            <article>
+                <h2>How to Add Collaborators</h2>
+                <p>If you want other developers to work on the same code base then you will need to add them as
+                    collaborators. To do this go to the "Settings" tab on your repo and select the "Collaborators"
+                    option on the left menu. Then select the green "Add people". You can enter someones github user id
+                    to find them.</p>
+                <img src="../images/collab.png" alt="collab" width="500">
             </article>
             <article>
                 <h2>How to Clone a Repository</h2>
@@ -152,6 +179,9 @@
                 </code>
             </article>
             <article>
+                <p class="important"><strong>NOTE:</strong>You will need to be in the top level folder of your
+                    repository for this to work.</p>
+                <p>
                 <h2>
                     How to Create a Branch
                 </h2>
@@ -180,6 +210,13 @@
             </article>
             <article>
                 <h2>How to Publish your Branch</h2>
+                <p class="important"><strong>NOTE:</strong>You will need to be in the top level folder of your
+                    repository for this to work.</p>
+                <p>
+                <p class="important"><strong>NOTE:</strong> You will need to be added as a collaborator of the repo in
+                    order to
+                    do
+                    this.</p>
                 <p>
                     You will need to publish your branch to github so that the remote repository knows about your
                     changes.
@@ -196,6 +233,9 @@
                 <h2>
                     How to Commit your changes
                 </h2>
+                <p class="important"><strong>NOTE:</strong>You will need to be in the top level folder of your
+                    repository for this to work.</p>
+                <p>
                 <p>
                     In git a commit is a save point of your changes. You can create as many as you want. Each commit
                     will have a unique id.
@@ -203,6 +243,7 @@
                 <p>To create a commit requires 2 steps the first is called staging and is a way to preview what you are
                     going to commit. This is useful if you don't want to commit everything or what to double check
                     things.The second stage is actually commit the things you have staged.</p>
+                <h3>Staging</h3>
                 <p>
                     To stage all the files you have changed use the following. Note the full stop after the add.
                 </p>
@@ -222,6 +263,122 @@
                 <p>
                     Alternatively you can use the VSCode git hub menu. On the left menu click on the github icon (often
                     the third one down) and you should see the following:
+                </p>
+                <img src="../images/vscode-github.png" alt="github demo" width="400">
+                <p>You can use the various buttons here to stage or unstage your changes. If you click on one of the
+                    file names VSCode will show you the changes you have made.</p>
+                <img src="../images/vscode-changes.png" alt="github demo" width="400">
+                <h3>Commit</h3>
+                <p>
+                    Once you have staged your changes and are happy to commit them you can use the following:
+                </p>
+                <code>
+                    git commit -m "MESSAGE"                
+                </code>
+                <p>
+                    Replace the "MESSAGE" with a sensible note (wrapped in double quotes) about what changes you are
+                    making. Note this
+                    will be visible to yourself and other developers forever so it is good practice to make the message
+                    meaningful.
+                </p>
+                <p>
+                    For Example
+                </p>
+                <code>
+                    git commit -m "Added a paragraph to the github page"
+                </code>
+                <p>
+                    To view all your commits you can use
+                </p>
+                <code>
+                    git log 
+                </code>
+                <img src="../images/log-demo.png" alt="git log" width="400">
+                <p>
+                    Alternatively the timeline view in VSCode can show you this as well.
+                </p>
+                <h3>Summary</h3>
+                <code>
+                    git add .
+                </code>
+                <code>
+                    git commit -m "MESSAGE GOES HERE"                
+                </code>
+            </article>
+            <article>
+                <h2>How to Push your commits</h2>
+                <p class="important"><strong>NOTE:</strong>You will need to be in the top level folder of your
+                    repository for this to work.</p>
+                <p>
+                <p class="important"><strong>NOTE:</strong> You will need to be added as a collaborator of the repo in
+                    order to
+                    do
+                    this.</p>
+                <p>
+                    To add your commits to the remote branch in github you need to push them up.
+                </p>
+                <code>
+                    git push
+                </code>
+                <p>
+                    That's about it.
+                </p>
+            </article>
+            <article>
+                <h2>
+                    How to get the latest changes
+                </h2>
+                <p class="important"><strong>NOTE:</strong>You will need to be in the top level folder of your
+                    repository for this to work.</p>
+                <p>
+                <p>
+                    Often other developers will have made changes to the master branch (or any other branch) whilst you
+                    have been working on your stuff. To get the latest changes to any branch you need to pull them down.
+                    It is advised to do this before branching off master.
+                </p>
+                <code>
+                    git pull
+                </code>
+            </article>
+            <article>
+                <h2>How to merge your changes in</h2>
+                <p>
+                    Once you have created your branch and pushed it up to github you can go and have a look at it and
+                    create a Pull Request. A Pull Request is a way of checking your work and getting other developers to
+                    review it before moving it in.
+                </p>
+                <p>
+                    Go to your repo in github then go to the code tab and click on branches.
+                </p>
+                <img src="../images/github-code-and-branches.png" alt="code" width="600" />
+                <p>Next to your branch click on "New Pull Request"</p>
+                <img src="../images/new-pr.png" alt="code" width="600" />
+                <p>
+                    On the next screen fill in a useful comment. Other developers will be able to see this so take some
+                    time here. When your done click on "Create pull request".
+                </p>
+                <img src="../images/new-pr-screen.png" alt="code" width="600" />
+                <p>You can review the changes by going to the "Files Changed" tab and adding a review. "Approve" and
+                    "Submit" the review if you are happy. Request changes otherwise.</p>
+                <img src="../images/approve-PR.png" alt="code" width="600" />
+                <p>
+                    When the PR has been approved. You can click on "Merge pull request" on the "Conversation" tab. You
+                    will be asked to confirm. Do so if you want to merge it in.
+                </p>
+                <img src="../images/megre-pr.png" alt="code" width="600" />
+                <p>Once this is done your changes will appear on the master branch.</p>
+                <p>To see this happening, switch to the master branch</p>
+                <code>
+                    git checkout master.
+                </code>
+                <p>
+                    Then pull the latest changes.
+                </p>
+                <code>
+                    git pull
+                </code>
+                <p>
+                    You should see your changes appear.
                 </p>
             </article>
         </section>
