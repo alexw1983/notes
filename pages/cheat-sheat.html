@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>Git Cheat Sheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../iamges/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="stylesheet" href="../styles/main.css" />
+</head>
+
+<body>
+    <main>
+        <section id="Sidebar">
+            <div class="logo">
+                <img alt="logo" src="../images/android-chrome-512x512.png" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./git-and-github.html">Git and Github</a></li>
+                    <li><a href="./cheat-sheat.html">Git Cheat sheet</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section id="MainContent">
+            <h1>Git Cheat Sheet</h1>
+            <p>
+                If you've already read the <a href="./git-and-github.html">main bit here then this page summarizes
+                    that.</a>
+            </p>
+            <article>
+                <h3>Clone</h3>
+                <p>Note you only have to do this the first time. This will create a folder on your computer with all the
+                    code in it. You will need to be in that folder for the rest of this to work.</p>
+                <code>
+                   git clone path_to_repo
+               </code>
+                <h3>Create branch</h3>
+                <p>
+                    Create a version of the code just for you.
+                </p>
+                <code>
+                   git checkout -b branch_name
+               </code>
+                <h3>Publish branch</h3>
+                <p>
+                    Let github know about your branch.
+                </p>
+                <code>
+                   git push -u origin branch_name
+               </code>
+                <h3>
+                    Stage all changes
+                </h3>
+                <p>
+                    Preview yoru changes before saving.
+                </p>
+                <code>
+                   git add .
+                </code>
+                <h3>
+                    Stage specific file
+                </h3>
+                <code>
+                    git add path_to_file
+                </code>
+                <h3>
+                    Commit Changes
+                </h3>
+                <p>
+                    Save your changes to git. Note this isn't the same as saving them on disk.
+                </p>
+                <code>
+                    git commit -m "message" 
+                </code>
+                <h3>
+                    Push Changes
+                </h3>
+                <p>
+                    Send your changes up to github.
+                </p>
+                <code>
+                    git push
+                </code>
+                <h3>
+                    Pull Changes
+                </h3>
+                <p>
+                    Get the latest changes down from github
+                </p>
+                <code>
+                    git pull
+                </code>
+            </article>
+
+        </section>
+    </main>
+</body>
+
+</html>
