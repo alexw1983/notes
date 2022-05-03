@@ -17,7 +17,7 @@ article {
 }
 
 #Sidebar {
-    background-color: #ababab;
+    background-color: #3f3f3f;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -26,25 +26,27 @@ article {
 }
 
 a {
-    color: Black;
+    color: #3f3f3f;
 }
 
-a:visited {
-    color: Black;
+#Sidebar a {
+    color: White;
 }
 
 a:hover {
     text-decoration: underline;
     color: #209CEE;
     cursor: pointer;
-    font-weight: bold;
+}
+
+#Sidebar a:hover {
+    color: #209CEE;
 }
 
 .logo {
     width: 200px;
     height: 200px;
     margin: 20px;
-
 }
 
 .logo img {
@@ -79,8 +81,8 @@ header {
 }
 
 #MainContent {
-    max-width: 600px;
-    padding: 10px 20px;
+    max-width: 700px;
+    margin: 10px 25px;
 }
 
 code {
